@@ -4,6 +4,7 @@ import java.io.Serializable;
 import java.util.Collection;
 import java.util.List;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
@@ -27,6 +28,7 @@ public class User implements Serializable , UserDetails {
 	
 	private static final long serialVersionUID = 1L;
 	@Id
+	@Column(name = "Id", columnDefinition = "serial")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int Id;
     private String username;
