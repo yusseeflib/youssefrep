@@ -8,9 +8,9 @@ import org.springframework.data.jpa.repository.Query;
 import com.example.demo.model.Users;
 
 public interface UserRepository extends JpaRepository<Users, Integer> {
-    @Query(" select u from User u " +
+    @Query(" select u from Users u " +
             " where u.username = ?1")
-    Optional<Users> findUserWithName(String username);
+    Optional<Users> findUsersWithName(String username);
 
     Users findByUserId(long id);
 }
