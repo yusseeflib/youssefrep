@@ -33,10 +33,10 @@ public class UserController {
 		return userRepository.findAll();
 	}
 	
-	@DeleteMapping(value = "/delete/{userId}")
+	@DeleteMapping(value = "/delete/{Id}")
 	public void delete(@PathVariable(required = true) long id) {
 		System.out.println("id = "+id);
-		Users user = userRepository.findByUserId(id);
+		Users user = userRepository.findById(id);
 		userRepository.delete(user);
 	}
 	

@@ -28,7 +28,7 @@ public class Users implements Serializable , UserDetails {
 	private static final long serialVersionUID = 1L;
 	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int userId;
+    private int Id;
     private String username;
     private String password;
     private String nom;
@@ -44,11 +44,12 @@ public class Users implements Serializable , UserDetails {
 	public void setCrsalle(List<Crsalle> crsalle) {
 		this.crsalle = crsalle;
 	}
-	public int getUserId() {
-		return userId;
+	
+	public int getId() {
+		return Id;
 	}
-	public void setUserId(int userId) {
-		this.userId = userId;
+	public void setId(int id) {
+		Id = id;
 	}
 	public String getNom() {
 		return nom;
