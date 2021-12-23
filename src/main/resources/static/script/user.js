@@ -10,7 +10,7 @@ $(document)
 										},
 										columns : [
 												{
-													data : "id"
+													data : "userId"
 												},
 												{
 													data : "username"
@@ -159,7 +159,7 @@ $(document)
 								btn.click(function(e) {
 									e.preventDefault();
 									var p = {
-										id : $("#id").val(),
+										userId : $("#id").val(),
 										username : $("#username").val(),
 										nom : $("#nom").val(),
 										password : $("#password").val(),

@@ -29,14 +29,14 @@ public class UserController {
 	}
 	
 	@GetMapping("/all")
-	public List<User> findall(){
+	public List<User> load(){
 		return userRepository.findAll();
 	}
 	
-	@DeleteMapping(value = "/delete/{id}")
-	public void delete(@PathVariable(required = true) String id) {
+	@DeleteMapping(value = "/delete/{userId}")
+	public void delete(@PathVariable(required = true) long id) {
 		System.out.println("id = "+id);
-		User user = userRepository.findById((int) Long.parseLong(id));
+		User user = userRepository.findById(id);
 		userRepository.delete(user);
 	}
 	
