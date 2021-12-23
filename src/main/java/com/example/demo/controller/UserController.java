@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.example.demo.model.Produit;
-import com.example.demo.model.User;
+import com.example.demo.model.Users;
 import com.example.demo.repository.UserRepository;
 
 @RestController
@@ -24,19 +24,19 @@ public class UserController {
 	UserRepository userRepository;
 
 	@PostMapping("/save")
-	public void save(@RequestBody  User user){
+	public void save(@RequestBody  Users user){
 		userRepository.save(user);
 	}
 	
 	@GetMapping("/all")
-	public List<User> load(){
+	public List<Users> load(){
 		return userRepository.findAll();
 	}
 	
 	@DeleteMapping(value = "/delete/{userId}")
 	public void delete(@PathVariable(required = true) long id) {
 		System.out.println("id = "+id);
-		User user = userRepository.findByUserId(id);
+		Users user = userRepository.findByUserId(id);
 		userRepository.delete(user);
 	}
 	

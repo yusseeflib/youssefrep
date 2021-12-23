@@ -20,7 +20,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 
 @Entity
 
-public class User implements Serializable , UserDetails {
+public class Users implements Serializable , UserDetails {
     /**
 	 * 
 	 */

@@ -20,9 +20,9 @@ public class Crsalle {
 	@ManyToOne
 	private Salle salle;
 	@ManyToOne
-	private User user;
+	private Users user;
 
 	public Crsalle() {
-		user=new User();
+		user=new Users();
 	}
 }
