@@ -19,10 +19,12 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 
 @Entity
 @Table(name = "USER")
+
 public class User implements Serializable , UserDetails {
     /**
 	 * 
 	 */
+	
 	private static final long serialVersionUID = 1L;
 	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
