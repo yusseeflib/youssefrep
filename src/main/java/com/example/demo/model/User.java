@@ -19,8 +19,6 @@ import org.springframework.security.core.userdetails.UserDetails;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 @Entity
-@Table(name = "USER")
-
 public class User implements Serializable , UserDetails {
     /**
 	 * 
@@ -28,7 +26,6 @@ public class User implements Serializable , UserDetails {
 	
 	private static final long serialVersionUID = 1L;
 	@Id
-	@Column(name = "Id", columnDefinition = "serial")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int Id;
     private String username;
