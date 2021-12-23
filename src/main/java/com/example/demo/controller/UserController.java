@@ -24,12 +24,12 @@ public class UserController {
 	UserRepository userRepository;
 
 	@PostMapping("/save")
-	public void save(@RequestBody final User user){
+	public void save(@RequestBody  User user){
 		userRepository.save(user);
 	}
 	
 	@GetMapping("/all")
-	public List<User> load(){
+	public List<User> findall(){
 		return userRepository.findAll();
 	}
 	
