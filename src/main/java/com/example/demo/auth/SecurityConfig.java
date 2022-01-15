@@ -33,16 +33,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
-		// http.authorizeRequests()
-		// .antMatchers("/index").hasAnyRole("USER", "ADMIN")
-		// .antMatchers("/produits").hasAnyRole("USER", "ADMIN")
-		// .antMatchers("/dist/**","/fonts/**","/img/**","/inc/**","/css/**",
-		// "/js/**", "/vendor/**", "/sass/**", "/style/**").permitAll()
-		// .antMatchers("/marques").hasAnyRole("ADMIN")
-		// .anyRequest().authenticated().and().formLogin()
-		// .loginPage("/forget.html").permitAll()
-		// .loginPage("/login.html").permitAll()
-		// .and().logout().permitAll();
+		
 
 		http.csrf()
 		.disable()
@@ -51,7 +42,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 		.and().authenticationProvider(getProvider())
 		.formLogin()
 		.loginProcessingUrl("/login")
-		.successHandler(new AuthentificationLoginSuccessHandler())
+		.successHandler(loginSuccessHandler)
 		.failureHandler(new UrlAuthenticationFailureHandler())
 		.and().logout().logoutUrl("/logout")
 		.logoutSuccessHandler(new AuthentificationLogoutSuccessHandler())
@@ -66,9 +57,9 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 						"/css/**", "/js/**", "/vendor/**", "/sass/**", "/style/**")
 		.permitAll()
 		.anyRequest().permitAll();
-
+		
 	}
-	
+	@Autowired private LoginSuccessHandler loginSuccessHandler;
    
 	public class DeniedAuthenticationEntryPoint extends Http403ForbiddenEntryPoint{
 		@Override

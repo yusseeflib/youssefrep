@@ -3,14 +3,14 @@
 
 <head>
 <meta charset="UTF-8">
-<title>Market</title>
+<title>Gestion</title>
 
 
 <meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <link rel='stylesheet' href='vendor/bootstrap-4.1/bootstrap.min.css'>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
 <link rel='stylesheet'
 	href='vendor/font-awesome-5/css/fontawesome-all.min.css'>
@@ -37,72 +37,35 @@
 
 </head>
 <body>
-	<div class="page-wrapper chiller-theme toggled">
-		<a id="show-sidebar" class="btn btn-sm btn-dark" href="#"> <i
-			class="fas fa-bars"></i>
-		</a>
-		<nav id="sidebar" class="sidebar-wrapper">
-			<div class="sidebar-content">
-				<div class="sidebar-brand">
-					<a href="./" class="h2 pt-2">Market</a>
-					<div id="close-sidebar">
-						<i class="fas fa-times"></i>
-					</div>
-				</div>
-				<div class="sidebar-header">
-					<div class="user-pic">
-						<img class="img-responsive img-rounded" src="img/no-photo.png"
-							alt="User picture">
-					</div>
-					<div class="user-info">
-						<span class="user-name"> <strong>NOM </strong>
-						</span> <span class="user-role">ROLE</span> <span class="user-status">
-							<i class="fa fa-circle"></i> <span>Online</span>
-						</span>
-					</div>
-				</div>
-				<!-- sidebar-header  -->
-
-				<!-- sidebar-search  -->
-				<div class="sidebar-menu">
-					<ul>
-						<li class="header-menu"><span>Gestion</span></li>
-						<li><a href="./index.html" onclick="show('blocs')"><i
-								class="zmdi zmdi-hc-1x zmdi-group-work"></i>Blocs</a></li>
-
-						<li><a href="./index.html" onclick="show('statistiques')"><i
-								class="zmdi zmdi-hc-1x zmdi-group-work"></i>Statistiques</a></li>
-
-						<li><a href="./index.html" onclick="show('marques')"><i
-								class="zmdi zmdi-hc-1x zmdi-group-work"></i>Marques</a></li>
+	<div class="w3-sidebar w3-bar-block w3-card w3-animate-left" style="display:none" id="mySidebar">
+	<button class="w3-bar-item w3-button w3-large"
+  onclick="w3_close()">Fermer la barre &times;</button>
+						<a href="./index.html" onclick="show('statistiques')" class="w3-bar-item w3-button">Statistiques</a>
+						
+						<a href="./index.html" onclick="show('blocs')" class="w3-bar-item w3-button">Blocs</a>
+                        <a href="./index.html" onclick="show('salles')" class="w3-bar-item w3-button">Salles</a>
+						
+						<a href="./index.html" onclick="show('marques')" class="w3-bar-item w3-button">Marques</a>
 
 
-						<li><a href="./index.html" onclick="show('machines')"><i
-								class="zmdi zmdi-hc-1x zmdi-group-work"></i>Machines</a></li>
+						<a href="./index.html" onclick="show('machines')" class="w3-bar-item w3-button">Machines</a>
                         
-                        <li><a href="./index.html" onclick="show('salles')"><i
-								class="zmdi zmdi-hc-1x zmdi-group-work"></i>Salles</a></li>
-						<li><a href="./index.html" onclick="show('creneaus')"><i
-								class="zmdi zmdi-hc-1x zmdi-group-work"></i>Creneaux</a></li>
-					    <li><a href="./index.html" onclick="show('users')"><i
-								class="zmdi zmdi-hc-1x zmdi-group-work"></i>Utilisateurs</a></li>
-					</ul>
-				</div>
-				<!-- sidebar-menu  -->
-			</div>
-			<!-- sidebar-content  -->
-			<div class="sidebar-footer">
-				<a href="/logout"> <i class="fa fa-power-off"></i> <span>Déconnexion</span>
-				</a>
-			</div>
-		</nav>
-		<!-- sidebar-wrapper  -->
+                        
+						<a href="./index.html" onclick="show('creneaus')" class="w3-bar-item w3-button">Creneaux</a>
+						<a href="./index.html" onclick="show('reservations2')" class="w3-bar-item w3-button">Reservations</a>
+					    <a href="./index.html" onclick="show('users')" class="w3-bar-item w3-button">Utilisateurs</a>
+						<a href="logout" >Déconnexion</a>
+		</div>
+		<div id="main">
+
+<div class="w3-blue">
+<button id="openNav" class="w3-button  w3-blue w3-xlarge" onclick="w3_open()">&#9776;</button>
+</div>
 		<main class="page-content">
 		<div class="container-fluid" id="main-content"></div>
 
 		</main>
-		<!-- page-content" -->
-	</div>
+		</div>
 	<!-- page-wrapper -->
 	<script src="script/redirect.js"></script>
 	<script src="vendor/slick/slick.min.js">
@@ -125,5 +88,18 @@
 	</script>
 	<script src="script/index.js"></script>
 	<script src="js/main.js"></script>
+	<script>
+function w3_open() {
+  document.getElementById("main").style.marginLeft = "25%";
+  document.getElementById("mySidebar").style.width = "25%";
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("openNav").style.display = 'none';
+}
+function w3_close() {
+  document.getElementById("main").style.marginLeft = "0%";
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("openNav").style.display = "inline-block";
+}
+</script>
 </body>
 </html>
