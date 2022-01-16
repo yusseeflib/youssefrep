@@ -27,7 +27,7 @@ public class LoginSuccessHandler extends SavedRequestAwareAuthenticationSuccessH
        if (userDetails.hasRole("Admin")) {
            redirectURL = "index.html";
        } else if (userDetails.hasRole("User")) {
-           redirectURL = "indew.html";
+           redirectURL = "index2.html";
        } 
        int m = (int) userDetails.getUserId(); 
        
