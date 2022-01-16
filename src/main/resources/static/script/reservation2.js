@@ -48,7 +48,7 @@ $(document)
 							function() {
 								var btn = $('#btn');
 								
-								var statut = 'Rejetee';
+								var statut = 'Rejetée';
 								
 								
 								btn.text('Confirmer');
@@ -92,7 +92,7 @@ $('#table-content').on(
 							'.accepter',
 							function() {
 								var btn = $('#btn');
-									var statut = 'accepter';
+									var statut = 'En cours';
 								
 								btn.text('Confirmer');
 							$("#id").val(id);
