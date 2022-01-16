@@ -33,11 +33,7 @@ $(document)
 														return '<button type="button" class="btn btn-outline-danger supprimer">Supprimer</button>';
 												}
 												},
-												{
-													"render" : function() {
-														return '<button type="button" class="btn btn-outline-secondary modifier">Modifier</button>';
-													}
-												} ]
+												 ]
 
 									});
 					
