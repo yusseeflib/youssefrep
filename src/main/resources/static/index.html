@@ -11,14 +11,14 @@
 
 <link rel='stylesheet' href='vendor/bootstrap-4.1/bootstrap.min.css'>
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-
+<script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
 <link rel='stylesheet'
 	href='vendor/font-awesome-5/css/fontawesome-all.min.css'>
 <link href="vendor/mdi-font/css/material-design-iconic-font.min.css"
 	rel="stylesheet" media="all">
 <link href="vendor/datatable/dataTables.bootstrap4.min.css"
 	rel="stylesheet" media="all">
-
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="style/style.css">
 <link rel="stylesheet" href="style/theme.css">
 <link href="vendor/css-hamburgers/hamburgers.min.css" rel="stylesheet"
@@ -37,24 +37,24 @@
 
 </head>
 <body>
-	<div class="w3-sidebar w3-bar-block w3-card w3-animate-left" style="display:none" id="mySidebar">
+	<div class="w3-sidebar w3-bar-block w3-card w3-animate-left" style="display:none;font-size: 1.2em;font-weight: bolder;" id="mySidebar">
 	<button class="w3-bar-item w3-button w3-large"
   onclick="w3_close()">Fermer la barre &times;</button>
-						<a href="./index.html" onclick="show('statistiques')" class="w3-bar-item w3-button">Statistiques</a>
+						<a href="./index.html" onclick="show('statistiques')" class="w3-bar-item w3-button"><i class='fas fa-align-right'></i> Statistiques</a>
 						
-						<a href="./index.html" onclick="show('blocs')" class="w3-bar-item w3-button">Blocs</a>
-                        <a href="./index.html" onclick="show('salles')" class="w3-bar-item w3-button">Salles</a>
+						<a href="./index.html" onclick="show('blocs')" class="w3-bar-item w3-button"><i class='fas fa-building'></i> Blocs</a>
+                        <a href="./index.html" onclick="show('salles')" class="w3-bar-item w3-button"><i class='fas fa-school'></i> Salles</a>
 						
-						<a href="./index.html" onclick="show('marques')" class="w3-bar-item w3-button">Marques</a>
+						<a href="./index.html" onclick="show('marques')" class="w3-bar-item w3-button"><i class='fas fa-box'></i> Marques</a>
 
 
-						<a href="./index.html" onclick="show('machines')" class="w3-bar-item w3-button">Machines</a>
+						<a href="./index.html" onclick="show('machines')" class="w3-bar-item w3-button"><i class='fas fa-laptop'></i> Machines</a>
                         
                         
-						<a href="./index.html" onclick="show('creneaus')" class="w3-bar-item w3-button">Creneaux</a>
-						<a href="./index.html" onclick="show('reservations2')" class="w3-bar-item w3-button">Reservations</a>
-					    <a href="./index.html" onclick="show('users')" class="w3-bar-item w3-button">Utilisateurs</a>
-						<a href="logout" >Déconnexion</a>
+						<a href="./index.html" onclick="show('creneaus')" class="w3-bar-item w3-button"><i class='fas fa-business-time'></i> Creneaux</a>
+						<a href="./index.html" onclick="show('reservations2')" class="w3-bar-item w3-button"><i class='fas fa-book-reader'></i> Reservations</a>
+					    <a href="./index.html" onclick="show('users')" class="w3-bar-item w3-button"><i class='fas fa-user-cog'></i> Utilisateurs</a>
+						<a href="/logout" class="w3-bar-item w3-button"><i class="fa fa-sign-out" style="color:red"></i> Déconnexion </a>
 		</div>
 		<div id="main">
 
