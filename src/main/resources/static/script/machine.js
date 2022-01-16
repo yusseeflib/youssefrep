@@ -1,4 +1,4 @@
-x$(document)
+$(document)
 		.ready(
 				function() {
 

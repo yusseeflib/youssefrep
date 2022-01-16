@@ -8,5 +8,6 @@ import org.springframework.stereotype.Component;
 public interface ReservationRepository extends JpaRepository<Reservation, Integer> {
 
     Reservation findById(long id);
+    
 
 }
