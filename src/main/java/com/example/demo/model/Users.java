@@ -18,12 +18,11 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 
 @Entity
 
-public class Users implements Serializable,UserDetails{
+public class Users implements UserDetails{
 	/**
 	 * 
 	 */
 
-	private static final long serialVersionUID = 1L;
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long userId;
@@ -31,8 +30,7 @@ public class Users implements Serializable,UserDetails{
 	private String password;
 	private String nom;
 	private String prenom;
-	private Users user;
-	@ManyToMany(cascade = CascadeType.PERSIST, fetch = FetchType.EAGER)
+	@ManyToMany
 	@JoinTable(name = "users_roles", joinColumns = @JoinColumn(name = "userId"), inverseJoinColumns = @JoinColumn(name = "role_id"))
 	private Set<Role> roles = new HashSet<>();
 

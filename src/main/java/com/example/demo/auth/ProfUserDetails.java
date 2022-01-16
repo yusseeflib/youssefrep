@@ -2,8 +2,6 @@ package com.example.demo.auth;
 
 import java.util.ArrayList;
 import java.util.Collection;
-import java.util.HashSet;
-import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
 
@@ -16,7 +14,6 @@ import com.example.demo.model.Users;
 
 public class ProfUserDetails implements UserDetails {
     private Users user;
-    private Set<Role> roles = new HashSet<>();
      
     public ProfUserDetails(Users user) {
         this.user = user;
@@ -32,20 +29,11 @@ public class ProfUserDetails implements UserDetails {
         }
         return authorities;
     }
-    public boolean hasRole(String roleName) {
-        Iterator<Role> iterator = this.roles.iterator();
-        while (iterator.hasNext()) {
-            Role role = iterator.next();
-            if (role.getName().equals(roleName)) {
-            	return this.user.hasRole(roleName);
-            }
-        }
-         
-        return false;
-    }
  
      
-    
+    public boolean hasRole(String roleName) {
+        return this.user.hasRole(roleName);
+    }
 
 	
 	
