@@ -23,7 +23,7 @@ $(document)
 													data : "salle.code"
 												},
 												{
-													data : "users.username"
+													User
 												},
 												{
 													data : "statut"
